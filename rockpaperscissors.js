@@ -13,25 +13,18 @@ function getComputerChoice() {
 
 console.log(getComputerChoice(randomNumber));
 
-let humanChoice = choicePrompt();
-
-function choicePrompt() {
-  prompt("Choose Rock, Paper or Scissors", "Rock");
-}
+let humanChoice = prompt("Choose Rock, Paper or Scissors", "Rock");
 
 function getHumanChoice() {
 
-  if(humanChoice==="Rock") {
+  if(humanChoice=="Rock") {
   return "Rock";
-  } else if(humanChoice==="Scissors") {
+  } else if(humanChoice=="Scissors") {
   return "Scissors"; 
-  } else if (humanChoice==="Paper") {
+  } else if (humanChoice=="Paper") {
   return "Paper"; 
-  }
-  else {
+  } else {
   alert("Insert either Rock, Paper or Scissors");
-  choicePrompt();
-  getHumanChoice();
   }
 }
 
@@ -43,7 +36,7 @@ let computerScore = 0
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
-function playRound(getHumanChoice, getComputerChoice) {
+function playRound(humanSelection, computerSelection) {
 
   if(humanSelection===computerSelection) {
   alert("Tie");
