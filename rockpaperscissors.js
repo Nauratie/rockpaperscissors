@@ -1,7 +1,6 @@
-let randomNumber = Math.random();
+function getComputerChoice() { 
+  let randomNumber = Math.random();
 
-function getComputerChoice() {
-  
   if(randomNumber<0.3333) {
   return "Scissors"; 
   } else if(randomNumber>0.6666) {
@@ -11,11 +10,10 @@ function getComputerChoice() {
   }
 }
 
-console.log(getComputerChoice(randomNumber));
-
-let humanChoice = prompt("Choose Rock, Paper or Scissors", "Rock");
-
 function getHumanChoice() {
+
+  let humanChoice = prompt("Choose Rock, Paper or Scissors", "Rock");
+
 
   if(humanChoice=="Rock") {
   return "Rock";
@@ -28,8 +26,6 @@ function getHumanChoice() {
   }
 }
 
-console.log(getHumanChoice());
-
 let humanScore = 0
 let computerScore = 0
 
@@ -37,6 +33,9 @@ const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 function playRound() {
+
+  getComputerChoice();
+  getHumanChoice();
 
   if(humanSelection===computerSelection) {
   alert("Tie");
@@ -49,9 +48,25 @@ function playRound() {
   } else {
   return ++computerScore && alert("You lose.");
   }
+
+  console.log(getComputerChoice(randomNumber));
+  console.log(getHumanChoice());
+  console.log(humanScore);
+  console.log(computerScore);
 }	 
 
-playRound();
+function playGame () {
+  let round = 1
 
-console.log(humanScore);
-console.log(computerScore);
+  if(round<6) {
+    playRound() && ++round;
+  }
+  else {
+    if(humanScore>computerScore) {
+      alert("Game over, you won!");
+    }
+    else {
+      alert("Game over, you lost.!");
+    }
+  }
+}
