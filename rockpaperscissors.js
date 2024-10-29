@@ -48,7 +48,7 @@ function playRound() {
   return ++computerScore && alert("You lose.");
   }
 
-  console.log(getComputerChoice(randomNumber));
+  console.log(getComputerChoice());
   console.log(getHumanChoice());
   console.log(humanScore);
   console.log(computerScore);
