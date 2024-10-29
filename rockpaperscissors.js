@@ -14,7 +14,6 @@ function getHumanChoice() {
 
   let humanChoice = prompt("Choose Rock, Paper or Scissors", "Rock");
 
-
   if(humanChoice=="Rock") {
   return "Rock";
   } else if(humanChoice=="Scissors") {
@@ -70,3 +69,5 @@ function playGame () {
     }
   }
 }
+
+playGame();
