@@ -41,11 +41,11 @@ function playRound() {
   if(humanSelection===computerSelection) {
   alert("Tie");
   } else if(humanSelection==="Rock" && computerSelection==="Scissors") {
-  return ++humanScore;
+  return ++humanScore && alert("You win!");
   } else if(humanSelection==="Scissors" && computerSelection==="Paper") {
-  return ++humanScore;
+  return ++humanScore && alert("You win!");
   } else if(humanSelection==="Paper" && computerSelection==="Rock")  {
-  return ++humanScore;
+  return ++humanScore && alert("You win!");
   } else {
   return ++computerScore && alert("You lose.");
   }
