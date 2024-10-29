@@ -51,5 +51,7 @@ function playRound() {
   }
 }	 
 
+playRound();
+
 console.log(humanScore);
 console.log(computerScore);
