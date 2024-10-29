@@ -61,7 +61,7 @@ function playGame () {
     playRound() && ++round;
   }
   
-  for(round==5) {
+  if(round===5) {
     if(humanScore>computerScore) {
       alert("Game over, you won!");
     }
