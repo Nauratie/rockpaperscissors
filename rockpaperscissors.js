@@ -57,10 +57,11 @@ function playRound() {
 function playGame () {
   let round = 1
 
-  if(round<6) {
+  while(round<6) {
     playRound() && ++round;
   }
-  else {
+  
+  for(round==5) {
     if(humanScore>computerScore) {
       alert("Game over, you won!");
     }
