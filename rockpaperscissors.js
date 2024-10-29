@@ -29,13 +29,15 @@ function getHumanChoice() {
   }
 }
 
+console.log(getHumanChoice());
+
 let humanScore = 0
 let computerScore = 0
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
-function playRound(humanChoice, computerChoice) {
+function playRound(getHumanChoice, GetComputerChoice) {
 
   if(humanselection=computerSelection) {
   alert("Tie");
