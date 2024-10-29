@@ -36,7 +36,7 @@ let computerScore = 0
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
-function playRound(humanSelection, computerSelection) {
+function playRound() {
 
   if(humanSelection===computerSelection) {
   alert("Tie");
