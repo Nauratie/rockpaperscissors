@@ -47,12 +47,9 @@ function playRound() {
   } else if(humanSelection==="Paper" && computerSelection==="Rock")  {
   return ++humanScore;
   } else {
-  return ++computerScore;
-  alert("You lose.");
+  return ++computerScore && alert("You lose.");
   }
 }	 
-
-function playRound();
 
 console.log(humanScore);
 console.log(computerScore);
