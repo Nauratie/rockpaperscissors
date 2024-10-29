@@ -51,3 +51,6 @@ function playRound(humanSelection, computerSelection) {
   alert("You lose.");
   }
 }	 
+
+console.log(humanScore);
+console.log(computerScore);
