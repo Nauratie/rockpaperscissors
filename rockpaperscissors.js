@@ -58,7 +58,7 @@ function playGame () {
   let round = 1
 
   while(round<6) {
-    playRound() && ++round;
+    playRound() && return ++round;
   }
   
   if(round===5) {
