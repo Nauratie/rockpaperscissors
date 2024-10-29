@@ -26,6 +26,7 @@ function getHumanChoice() {
   }
   else {
   alert("Insert either Rock, Paper or Scissors");
+  humanChoice;
   }
 }
 
