@@ -38,9 +38,9 @@ let computerScore = 0
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
-function playRound(getHumanChoice, GetComputerChoice) {
+function playRound(getHumanChoice, getComputerChoice) {
 
-  if(humanselection=computerSelection) {
+  if(humanSelection===computerSelection) {
   alert("Tie");
   } else if(humanSelection==="Rock" && computerSelection==="Scissors") {
   return humanScore+1;
