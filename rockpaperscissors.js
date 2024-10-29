@@ -41,13 +41,13 @@ function playRound(humanSelection, computerSelection) {
   if(humanSelection===computerSelection) {
   alert("Tie");
   } else if(humanSelection==="Rock" && computerSelection==="Scissors") {
-  return humanScore+1;
+  return ++humanScore;
   } else if(humanSelection==="Scissors" && computerSelection==="Paper") {
-  return humanScore+1;
+  return ++humanScore;
   } else if(humanSelection==="Paper" && computerSelection==="Rock")  {
-  return humanScore+1;
+  return ++humanScore;
   } else {
-  return computerScore+1;
+  return ++computerScore;
   alert("You lose.");
   }
 }	 
