@@ -13,7 +13,11 @@ function getComputerChoice() {
 
 console.log(getComputerChoice(randomNumber));
 
-let humanChoice = prompt("Choose Rock, Paper or Scissors", "Rock");
+let humanChoice = choicePrompt();
+
+function choicePrompt() {
+  prompt("Choose Rock, Paper or Scissors", "Rock");
+}
 
 function getHumanChoice() {
 
@@ -26,7 +30,8 @@ function getHumanChoice() {
   }
   else {
   alert("Insert either Rock, Paper or Scissors");
-  humanChoice;
+  choicePrompt();
+  getHumanChoice();
   }
 }
 
