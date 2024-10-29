@@ -39,11 +39,11 @@ function playRound(humanChoice, computerChoice) {
 
   if(humanselection=computerSelection) {
   alert("Tie");
-  } else if(humanSelection="Rock" && computerSelection="Scissors") {
+  } else if(humanSelection==="Rock" && computerSelection==="Scissors") {
   return humanScore+1;
-  } else if(humanSelection="Scissors" && computerSelection="Paper") {
+  } else if(humanSelection==="Scissors" && computerSelection==="Paper") {
   return humanScore+1;
-  } else if(humanSelection="Paper" && computerSelection="Rock")  {
+  } else if(humanSelection==="Paper" && computerSelection==="Rock")  {
   return humanScore+1;
   } else {
   return computerScore+1;
