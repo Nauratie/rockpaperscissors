@@ -57,23 +57,24 @@ function playRound() {
   console.log(getHumanChoice());
   console.log(humanScore);
   console.log(computerScore);
+  return ++round;
 }	 
 
-function playGame () {
-  let round = 1
+let round = 1
 
-  while(round<6) {
-    return ++round && playRound();
-  }
-  
-  if(round==5) {
-    if(humanScore>computerScore) {
-      alert("Game over, you won!");
-    }
-    else {
-      alert("Game over, you lost.!");
-    }
-  }
+while(round<6) {
+  playGame();
 }
 
-playGame();
+function playGame () {
+  playRound();
+
+  if(round==5) {
+  if(humanScore>computerScore) {
+    alert("Game over, you won!");
+  }
+  else {
+    alert("Game over, you lost.!");
+  }
+}
+}
