@@ -13,63 +13,49 @@ function getComputerChoice() {
 
 function getHumanChoice() {
 
-  let humanChoice = promptChoice();
+  let humanChoice;
   
   function promptChoice() {
-  prompt("Choose Rock, Paper or Scissors", "Rock");
+  return prompt("Choose Rock, Paper or Scissors", "Rock");
   }
 
-  if(humanChoice=="Rock") {
-  return "Rock";
-  } else if(humanChoice=="Scissors") {
-  return "Scissors"; 
-  } else if (humanChoice=="Paper") {
-  return "Paper"; 
-  } else {
-  alert("Insert either Rock, Paper or Scissors") && getHumanChoice();
-  }
+  do {
+    humanChoice = promptChoice();
+  } while (humanChoice !== "Rock" && humanChoice !== "Paper" && humanChoice !== "Scissors");
+
+  return humanChoice;
 }
 
 let humanScore = 0
 let computerScore = 0
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-
 function playRound() {
 
-  getComputerChoice();
-  getHumanChoice();
+  const humanSelection = getHumanChoice();
+  const computerSelection = getComputerChoice();
 
   if(humanSelection===computerSelection) {
   alert("Tie");
-  } else if(humanSelection==="Rock" && computerSelection==="Scissors") {
-  return ++humanScore && alert("You win!");
-  } else if(humanSelection==="Scissors" && computerSelection==="Paper") {
-  return ++humanScore && alert("You win!");
-  } else if(humanSelection==="Paper" && computerSelection==="Rock")  {
-  return ++humanScore && alert("You win!");
+  } else if(humanSelection==="Rock" && computerSelection==="Scissors" ||
+            humanSelection==="Scissors" && computerSelection==="Paper" ||
+            humanSelection==="Paper" && computerSelection==="Rock") {
+    humanScore++;
+    alert("You win!");
   } else {
-  return ++computerScore && alert("You lose.");
+    computerScore++;
+    alert("You lose.");
   }
 
-  console.log(getComputerChoice());
-  console.log(getHumanChoice());
-  console.log(humanScore);
-  console.log(computerScore);
-  return ++round;
+  console.log("Computer: ${computerSelection}, Human: ${humanSelection}");
+  console.log(`Scores - Human: ${humanScore}, Computer: ${computerScore}`);
 }	 
 
-let round = 1
-
-while(round<6) {
-  playGame();
-}
-
 function playGame () {
-  playRound();
+  
+  for (let round = 1; round<=5; round++) {
+    playRound();
+  }
 
-  if(round==5) {
   if(humanScore>computerScore) {
     alert("Game over, you won!");
   }
@@ -77,4 +63,5 @@ function playGame () {
     alert("Game over, you lost.!");
   }
 }
-}
+
+playGame();
