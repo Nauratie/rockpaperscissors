@@ -26,7 +26,7 @@ function getHumanChoice() {
   } else if (humanChoice=="Paper") {
   return "Paper"; 
   } else {
-  alert("Insert either Rock, Paper or Scissors") & getHumanChoice();
+  alert("Insert either Rock, Paper or Scissors") && getHumanChoice();
   }
 }
 
@@ -63,7 +63,7 @@ function playGame () {
   let round = 1
 
   while(round<6) {
-    playRound() && return ++round;
+    return ++round && playRound();
   }
   
   if(round==5) {
