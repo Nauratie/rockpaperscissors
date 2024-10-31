@@ -1,4 +1,5 @@
 function getComputerChoice() { 
+  
   let randomNumber = Math.random();
 
   if(randomNumber<0.3333) {
@@ -12,7 +13,11 @@ function getComputerChoice() {
 
 function getHumanChoice() {
 
-  let humanChoice = prompt("Choose Rock, Paper or Scissors", "Rock");
+  let humanChoice = promptChoice();
+  
+  function promptChoice() {
+  prompt("Choose Rock, Paper or Scissors", "Rock");
+  }
 
   if(humanChoice=="Rock") {
   return "Rock";
@@ -21,7 +26,7 @@ function getHumanChoice() {
   } else if (humanChoice=="Paper") {
   return "Paper"; 
   } else {
-  alert("Insert either Rock, Paper or Scissors");
+  alert("Insert either Rock, Paper or Scissors") & getHumanChoice();
   }
 }
 
@@ -61,7 +66,7 @@ function playGame () {
     playRound() && return ++round;
   }
   
-  if(round===5) {
+  if(round==5) {
     if(humanScore>computerScore) {
       alert("Game over, you won!");
     }
