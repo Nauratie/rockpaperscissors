@@ -6,7 +6,7 @@ function isPrime(n) {
     if (n%i == 0) {
       continue;
     } else {
-      let prime += n;
+      let prime = prime +=`, ${n}`;
     }
   }
 
